@@ -1,17 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { compose } from "recompose";
+import store from "./store";
+import { Provider} from "react-redux";
+import AppNavigator from "./navigation/AppNavigator";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={{
-          flex: 1,
-          backgroundColor: '#fff',
-          alignItems: 'center',
-          justifyContent: 'center',
-      }}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+
+const App = () => (
+    <Provider store={store}>
+        <AppNavigator />
+    </Provider>
+);
+
+const enhance = compose();
+export default enhance(App);
