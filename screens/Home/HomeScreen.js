@@ -8,8 +8,7 @@ import themes from "../../themes";
 import s from './styles'
 
 const HomeScreen = ({
-                        navigation,
-                        language
+                        navigation
                     }) => (
     <ThemeProvider theme={themes.dark}>
         <Header
@@ -26,6 +25,7 @@ const HomeScreen = ({
                     Натисніть кнопку нижче для того щоб заповнити заявку на курси по JS
                 </Text>
                 <Button
+                    onPress={ () => navigation.push('Form') }
                     titleStyle={{marginLeft: 15}}
                     icon={<Icon name='wpforms' type='font-awesome' color='#ffffff' />}
                     backgroundColor='#03A9F4'
