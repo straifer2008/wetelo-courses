@@ -1,5 +1,5 @@
+import { createActions } from "redux-actions";
 import types from "./types";
-import {createActions} from "redux-actions";
 
 export const {
     userRegisterStart,

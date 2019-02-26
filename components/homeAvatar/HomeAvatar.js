@@ -6,12 +6,12 @@ import {connect} from "react-redux";
 import s from './styles'
 import {logout} from "../../state/auth/operations";
 
-const HomeAvatar = ({dropDown, toggleDropDown, logout}) => (
+const HomeAvatar = ({dropDown, toggleDropDown, logout, userAvatar}) => (
     <View>
         <Avatar
             onPress={() => toggleDropDown(dropDown = !dropDown)}
             source={{
-                uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                uri: userAvatar ? userAvatar : 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
             }}
         />
         <Modal
@@ -50,7 +50,11 @@ const HomeAvatar = ({dropDown, toggleDropDown, logout}) => (
     </View>
 );
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+    userAvatar: state.homeReducer.userAvatar,
+    loading: state.homeReducer.loading,
+    error: state.homeReducer.error,
+});
 const mapDispatchToProps = ({
     logout
 });

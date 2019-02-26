@@ -13,20 +13,7 @@ const HomeScreen = ({
                     }) => (
     <ThemeProvider theme={themes.dark}>
         <Header
-            leftComponent={
-                <Button
-                    onPress={() => navigation.push('Auth')}
-                    icon={
-                        <Icon
-                            name="chevron-left"
-                            type="font-awesome"
-                            size={20}
-                            color="white"
-                        />
-                    }
-                />
-            }
-            centerComponent={{ text: 'Home', style: { color: '#fff' } }}
+            centerComponent={{ text: 'Wetelo', style: { color: '#fff', fontSize: 24 } }}
             rightComponent={
                 <HomeAvatar/>
             }
@@ -35,14 +22,15 @@ const HomeScreen = ({
             <Card
                 title='User name'>
                 <AvatarPicker/>
-                <Text style={{marginBottom: 10}}>
-                    The idea with React Native Elements is more about component structure than actual design.
+                <Text style={s.textCenter}>
+                    Натисніть кнопку нижче для того щоб заповнити заявку на курси по JS
                 </Text>
                 <Button
+                    titleStyle={{marginLeft: 15}}
                     icon={<Icon name='wpforms' type='font-awesome' color='#ffffff' />}
                     backgroundColor='#03A9F4'
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                    title='Form to fill' />
+                    title='Заповнити форму' />
             </Card>
         </ScrollView>
     </ThemeProvider>

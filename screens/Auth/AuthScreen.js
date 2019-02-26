@@ -4,6 +4,7 @@ import RegisterForm from "../../components/registerForm/RegisterForm";
 import {Button, ThemeProvider} from "react-native-elements";
 import themes from "../../themes";
 import IconFA from 'react-native-vector-icons/FontAwesome';
+import Colors from "../../constants/colors";
 
 const AuthScreen = ({navigation}) => (
     <ThemeProvider theme={themes.dark}>
@@ -13,20 +14,16 @@ const AuthScreen = ({navigation}) => (
 
 AuthScreen.navigationOptions = ({navigation}) => ({
     title: 'Register',
-    headerLeft: <Button
-        style={{paddingHorizontal: 10}}
-        onPress={() => navigation.push('Home')}
-        title={'Home'}
-    />,
     headerRight: (
         <Button
+            type='outline'
             style={{paddingHorizontal: 10}}
             onPress={() => alert('This is INFO! mother fucker :)')}
             icon={
                 <IconFA
                     name="info"
                     size={15}
-                    color="white"
+                    color={Colors.blue}
                 />
             }
         />

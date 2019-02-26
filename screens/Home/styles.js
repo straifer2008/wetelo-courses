@@ -9,5 +9,10 @@ export default StyleSheet.create({
     },
     text: {
         color: Colors.text
+    },
+    textCenter: {
+        color: Colors.text,
+        textAlign: 'center',
+        paddingVertical: 20
     }
 });

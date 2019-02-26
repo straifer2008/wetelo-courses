@@ -1,13 +1,22 @@
 import types from "./types";
 
 const initialState = {
-    test: false
+    userAvatar: null,
+    loading: false,
+    error: null
 };
 
 const homeReducer = (state = initialState, action) => {
     switch (action.type) {
-        case (types.TEST_TYPE):
-            return { ...state, test: true };
+        case types.PIK_AVATAR_START:{
+            return { ...state, loading: true };
+        }
+        case types.PIK_AVATAR_ERROR: {
+            return { ...state, loading: false, error: action.payload };
+        }
+        case types.PIK_AVATAR_RECEIVE: {
+            return { ...state, loading: false, userAvatar: action.payload };
+        }
         default:
             return { ...state }
     }
