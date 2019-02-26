@@ -3,12 +3,11 @@ import {compose, withState} from 'recompose';
 import { connect } from "react-redux";
 import { Button } from 'react-native-elements';
 import {userRegister} from "../../state/auth/operations";
-import { View } from 'react-native';
+import { View, Text, ScrollView, KeyboardAvoidingView } from 'react-native';
 import IconFA from 'react-native-vector-icons/FontAwesome';
-import IconE from 'react-native-vector-icons/Entypo';
-import Colors from "../../constants/colors";
 import FormInput from "../formInput/formInput";
-import s from './styles'
+import { TextInputMask } from 'react-native-masked-text'
+import s from './styles';
 
 const RegisterForm = ({
                           navigation,
@@ -16,83 +15,82 @@ const RegisterForm = ({
                           userEmail, setUserEmail,
                           userPassword, setUserPassword,
                           userConfirmPassword, setUserConfirmPassword,
+                          userPhone, setUserPhone,
                           userRegister, loading, error
                       }) => (
-    <View>
-        <FormInput
-            value={userName}
-            onChangeText={ (name) => setUserName(name) }
-            placeholder='name'
-            label='Enter your name'
-            icon={
-                <IconFA
-                    name='user'
-                    size={24}
-                    color='#00aced' />
-            }
-            validationMessage={error ? 'Name not valid' : null}
-        />
-        <FormInput
-            value={userEmail}
-            onChangeText={ (email) => setUserEmail(email) }
-            placeholder='Email'
-            label='Enter your Email'
-            icon={
-                <IconE
-                    name='email'
-                    size={24}
-                    color={Colors.blue} />
-            }
-            validationMessage={error ? 'email not valid' : null}
-        />
-        <FormInput
-            value={userPassword}
-            onChangeText={ (password) => setUserPassword(password) }
-            placeholder='Password'
-            label='Enter your Password'
-            icon={
-                <IconE
-                    name='login'
-                    size={24}
-                    color={Colors.blue} />
-            }
-            validationMessage={error ? 'Password not valid' : null}
-        />
-        <FormInput
-            value={userConfirmPassword}
-            onChangeText={ (confirmPassword) => setUserConfirmPassword(confirmPassword) }
-            placeholder='Password confirmation'
-            label='Confirm your Password'
-            icon={
-                <IconE
-                    name='login'
-                    size={24}
-                    color={Colors.blue} />
-            }
-            validationMessage={error ? 'Password confirmation not valid' : null}
-        />
-
+    <KeyboardAvoidingView
+        style={s.container}
+        behavior="padding"
+        enabled={true}
+    >
+        <ScrollView style={s.container}>
+                <FormInput
+                    value={userName}
+                    onChangeText={ (name) => setUserName(name) }
+                    placeholder='Name'
+                    validationMessage={error ? 'Name not valid' : null}
+                />
+                <FormInput
+                    value={userEmail}
+                    onChangeText={ (email) => setUserEmail(email) }
+                    keyboardType={'email-address'}
+                    placeholder='Email'
+                    validationMessage={error ? 'email not valid' : null}
+                />
+                <FormInput
+                    value={userPassword}
+                    onChangeText={ (password) => setUserPassword(password) }
+                    placeholder='Password'
+                    secureTextEntry={true}
+                    validationMessage={error ? 'Password not valid' : null}
+                />
+                <FormInput
+                    value={userConfirmPassword}
+                    onChangeText={ (confirmPassword) => setUserConfirmPassword(confirmPassword) }
+                    placeholder='Password confirmation'
+                    secureTextEntry={true}
+                    validationMessage={error ? 'Password confirmation not valid' : null}
+                />
+            <View style={s.fieldWrap}>
+                <TextInputMask
+                    returnKeyType = { "next" }
+                    style={s.phoneField}
+                    type={'cel-phone'}
+                    placeholder='Phone (000)-00-00-000'
+                    options={{
+                        maskType: 'BRL',
+                        withDDD: true,
+                        dddMask: '(999)-99-99-999'
+                    }}
+                    value={userPhone}
+                    onChangeText={phone => setUserPhone(phone)}
+                />
+                {
+                    error ? <Text style={s.errorText}>Phone is not valid</Text>: null
+                }
+            </View>
+        </ScrollView>
         <View style={s.submitWrap}>
-        {
-            !loading ?
-                <Button
-                    onPress={
-                        () => userRegister({userName, userEmail, userPassword, userConfirmPassword, navigation})
-                    }
-                    disabled={!(userName && userEmail && userPassword && userConfirmPassword)}
-                    title="Register"
-                    type="solid"
-                    icon={
-                        <IconFA
-                            name="check"
-                            size={15}
-                            color="white"
-                        />
-                    }
-                /> : <Button type='outline' loading/>
-        }
-        </View>
-    </View>
+            {
+                !loading ?
+                    <Button
+                        onPress={
+                            () => userRegister({userName, userEmail, userPassword, userConfirmPassword, userPhone})
+                        }
+                        disabled={!(userName && userEmail && userPassword && userConfirmPassword && userPhone)}
+                        title="Register"
+                        type="solid"
+                        icon={
+                            <IconFA
+                                name="check"
+                                size={15}
+                                color="white"
+                            />
+                        }
+                    /> : <Button type='outline' loading/>
+            }
+            </View>
+    </KeyboardAvoidingView>
 );
 
 const mapStateToProps = (state) => ({
@@ -109,7 +107,8 @@ const enhance = compose(
     withState('userName', 'setUserName', ''),
     withState('userEmail', 'setUserEmail', ''),
     withState('userPassword', 'setUserPassword', ''),
-    withState('userConfirmPassword', 'setUserConfirmPassword', '')
+    withState('userConfirmPassword', 'setUserConfirmPassword', ''),
+    withState('userPhone', 'setUserPhone', '')
 );
 
 export default enhance(RegisterForm);

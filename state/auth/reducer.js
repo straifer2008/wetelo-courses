@@ -21,6 +21,7 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
+                userIsLogged: false,
                 notifications: null,
                 error: action.payload
             }
@@ -30,6 +31,30 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 error: null,
+                userIsLogged: true,
+                notifications: action.payload
+            }
+        }
+        case types.USER_LOGOUT_START: {
+            return {
+                ...state,
+                loading: true,
+                error: null,
+            }
+        }
+        case types.USER_LOGOUT_ERROR: {
+            return {
+                ...state,
+                loading: false,
+                error: action.payload
+            }
+        }
+        case types.USER_LOGOUT_RECEIVE: {
+            return {
+                ...state,
+                loading: false,
+                error: null,
+                userIsLogged: false,
                 notifications: action.payload
             }
         }

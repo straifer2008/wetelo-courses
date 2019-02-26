@@ -2,12 +2,12 @@ import React from 'react';
 import { compose } from "recompose";
 import store from "./store";
 import { Provider} from "react-redux";
-import AppNavigator from "./navigation/AppNavigator";
+import RootNavigator from "./navigation/RootNavigator";
 
 
 const App = () => (
     <Provider store={store}>
-        <AppNavigator />
+        <RootNavigator/>
     </Provider>
 );
 

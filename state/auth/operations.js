@@ -1,12 +1,19 @@
 import {apiGet, apiPost} from "../../utils/helpers/apiHelper";
-import {userRegisterError, userRegisterReceive, userRegisterStart} from "./action";
+import {
+    userLogoutError,
+    userLogoutReceive,
+    userLogoutStart,
+    userRegisterError,
+    userRegisterReceive,
+    userRegisterStart
+} from "./action";
 
 const userRegister = ({
                           userName,
                           userEmail,
                           userPassword,
                           userConfirmPassword,
-                          navigation
+                          userPhone
 }) => async (dispatch) => {
 
     dispatch(userRegisterStart());
@@ -18,15 +25,26 @@ const userRegister = ({
             userEmail,
             userPassword,
             userConfirmPassword,
+            userPhone
         });
         dispatch(userRegisterReceive({...data}));
-        navigation.navigate('Home')
     } catch (e) {
         dispatch(userRegisterError(e));
 
     }
 };
 
+const logout = () => (dispatch) => {
+    dispatch(userLogoutStart());
+
+    try {
+        dispatch(userLogoutReceive({message: 'Success logout'}));
+    } catch (e) {
+        dispatch(userLogoutError(e));
+    }
+};
+
 export {
-    userRegister
+    userRegister,
+    logout
 }
