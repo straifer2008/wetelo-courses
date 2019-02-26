@@ -13,7 +13,6 @@ const HomeAvatar = ({dropDown, toggleDropDown, logout}) => (
             source={{
                 uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
             }}
-            showEditButton
         />
         <Modal
             animationType="fade"

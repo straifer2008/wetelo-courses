@@ -1,8 +1,9 @@
 import React from 'react';
 import { compose } from 'recompose';
-import {ScrollView, Picker} from 'react-native';
-import {Header, ThemeProvider, Button, Icon} from "react-native-elements";
+import {ScrollView, View} from 'react-native';
+import {Header, ThemeProvider, Button, Icon, Card, Text, Avatar} from "react-native-elements";
 import HomeAvatar from "../../components/homeAvatar/HomeAvatar";
+import AvatarPicker from "../../components/avatarPicker/AvatarPicker";
 import themes from "../../themes";
 import s from './styles'
 
@@ -31,12 +32,18 @@ const HomeScreen = ({
             }
         />
         <ScrollView style={s.container}>
-            <Picker selectedValue={language}>
-                <Picker.Item label="Java" value="java" />
-                <Picker.Item label="JavaScript" value="js" />
-                <Picker.Item label="test" value="test" />
-                <Picker.Item label="test2" value="test2" />
-            </Picker>
+            <Card
+                title='User name'>
+                <AvatarPicker/>
+                <Text style={{marginBottom: 10}}>
+                    The idea with React Native Elements is more about component structure than actual design.
+                </Text>
+                <Button
+                    icon={<Icon name='wpforms' type='font-awesome' color='#ffffff' />}
+                    backgroundColor='#03A9F4'
+                    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                    title='Form to fill' />
+            </Card>
         </ScrollView>
     </ThemeProvider>
 );

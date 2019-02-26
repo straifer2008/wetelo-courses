@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1393567c-3163-4f44-804c-2a5d0c676657" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/homeAvatar/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/HomeNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/RootNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/avatarPicker/AvatarPicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/avatarPicker/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/confirmModal/ConfirmModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/confirmModal/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/formInput/formInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/formInput/formInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerForm/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerForm/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/registerForm/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/registerForm/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Home/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/auth/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/state/auth/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/auth/operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/state/auth/operations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/auth/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/state/auth/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/auth/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/state/auth/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,23 +31,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="3" />
-          <entry key="js" value="7601" />
-          <entry key="txt" value="9" />
+          <entry key="js" value="9475" />
+          <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="3" />
-          <entry key="JavaScript" value="7601" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="JavaScript" value="9475" />
+          <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="2" />
-          <entry key="js" value="156" />
+          <entry key="js" value="175" />
           <entry key="json" value="9" />
           <entry key="png" value="2" />
+          <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -65,7 +56,13 @@
           <entry key=".env file" value="2" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="156" />
+          <entry key="JavaScript" value="175" />
+          <entry key="TypeScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -73,13 +70,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screens/Home/HomeScreen.js">
+        <entry file="file://$PROJECT_DIR$/components/avatarPicker/AvatarPicker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="450">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/confirmModal/ConfirmModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#706#1125#0" />
               </folding>
             </state>
           </provider>
@@ -92,7 +100,11 @@
       <find>props</find>
       <find>IconFA</find>
       <find>userRegister</find>
+      <find>Modal</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/components</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,8 +149,12 @@
         <option value="$PROJECT_DIR$/state/auth/operations.js" />
         <option value="$PROJECT_DIR$/state/auth/reducer.js" />
         <option value="$PROJECT_DIR$/navigation/RootNavigator.js" />
-        <option value="$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js" />
         <option value="$PROJECT_DIR$/screens/Home/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js" />
+        <option value="$PROJECT_DIR$/components/avatarPicker/styles.js" />
+        <option value="$PROJECT_DIR$/components/confirmModal/ConfirmModal.js" />
+        <option value="$PROJECT_DIR$/components/confirmModal/styles.js" />
+        <option value="$PROJECT_DIR$/components/avatarPicker/AvatarPicker.js" />
       </list>
     </option>
   </component>
@@ -187,18 +203,19 @@
             <path>
               <item name="wetelo-courses" type="b2602c69:ProjectViewProjectNode" />
               <item name="wetelo-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="confirmModal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wetelo-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wetelo-courses" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="registerForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wetelo-courses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wetelo-courses" type="462c0819:PsiDirectoryNode" />
               <item name="navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wetelo-courses" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wetelo-courses" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wetelo-courses" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wetelo-courses" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,6 +230,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,7 +274,7 @@
       <workItem from="1551079376820" duration="2452000" />
       <workItem from="1551082072197" duration="27548000" />
       <workItem from="1551164316303" duration="7951000" />
-      <workItem from="1551172554784" duration="6451000" />
+      <workItem from="1551172554784" duration="15152000" />
     </task>
     <task id="LOCAL-00001" summary="navigate">
       <created>1551110558231</created>
@@ -265,20 +283,28 @@
       <option name="project" value="LOCAL" />
       <updated>1551110558231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="home screen">
+      <created>1551179986244</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551179986244</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44402000" />
+    <option name="totallyTimeSpent" value="53103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1926" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Command Line Tools Console" weight="0.3297414" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -291,7 +317,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.18642241" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.18642241" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,7 +332,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="navigate" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigate" />
+    <MESSAGE value="home screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="home screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/splash.png">
@@ -496,26 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/Home/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/homeAvatar/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/state/auth/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -529,16 +536,6 @@
           <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/registerForm/RegisterForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,25 +577,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js">
+    <entry file="file://$PROJECT_DIR$/screens/Home/styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/homeAvatar/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/registerForm/RegisterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="38" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1122#1304#0" />
-            <element signature="e#1324#2128#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-elements/src/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="1008" column="13" selection-start-line="1008" selection-start-column="13" selection-end-line="1008" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/homeAvatar/HomeAvatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/Home/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#706#1125#0" />
+            <element signature="e#533#602#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/avatarPicker/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/confirmModal/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/confirmModal/ConfirmModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/avatarPicker/AvatarPicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
