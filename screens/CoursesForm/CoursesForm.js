@@ -7,7 +7,9 @@ import s from './styles';
 
 const CoursesForm = () => (
     <ThemeProvider theme={themes.dark}>
-        <FormBuild/>
+        <FormBuild
+            onSubmitForm={val => console.log(val)}
+        />
     </ThemeProvider>
 );
 
