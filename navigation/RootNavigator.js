@@ -7,7 +7,7 @@ import HomeNavigator from "./HomeNavigator";
 const RootNavigator = ({userIsLogged}) => (
     <>
         {
-            !userIsLogged ? <HomeNavigator/> : <AppNavigator />
+            userIsLogged ? <HomeNavigator/> : <AppNavigator />
         }
     </>
 );

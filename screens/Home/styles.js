@@ -14,5 +14,9 @@ export default StyleSheet.create({
         color: Colors.text,
         textAlign: 'center',
         paddingVertical: 20
+    },
+    containerScroll: {
+        flex: 1,
+        marginTop: 10,
     }
 });

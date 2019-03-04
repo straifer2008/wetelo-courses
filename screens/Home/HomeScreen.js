@@ -1,14 +1,20 @@
 import React from 'react';
 import { compose } from 'recompose';
-import {ScrollView, View} from 'react-native';
-import {Header, ThemeProvider, Button, Icon, Card, Text, Avatar} from "react-native-elements";
+import {ActivityIndicator, ScrollView, View} from 'react-native';
+import {Header, ThemeProvider, Button, Icon, Card, Text } from "react-native-elements";
+import QueryList from "../../components/queryList/QueryList";
 import HomeAvatar from "../../components/homeAvatar/HomeAvatar";
 import AvatarPicker from "../../components/avatarPicker/AvatarPicker";
 import themes from "../../themes";
+import {connect} from "react-redux";
+import Colors from "../../constants/colors";
 import s from './styles'
 
 const HomeScreen = ({
-                        navigation
+                        navigation,
+                        loading,
+                        error,
+                        query
                     }) => (
     <ThemeProvider theme={themes.dark}>
         <Header
@@ -17,7 +23,7 @@ const HomeScreen = ({
                 <HomeAvatar/>
             }
         />
-        <ScrollView style={s.container}>
+        <View style={s.container}>
             <Card
                 title='User name'>
                 <AvatarPicker/>
@@ -32,7 +38,13 @@ const HomeScreen = ({
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                     title='Заповнити форму' />
             </Card>
-        </ScrollView>
+            {
+                loading ? <ActivityIndicator size='large' color={Colors.blue} /> :
+                    <ScrollView style={s.containerScroll}>
+                        <QueryList query={query}/>
+                    </ScrollView>
+            }
+        </View>
     </ThemeProvider>
 );
 
@@ -40,6 +52,14 @@ HomeScreen.navigationOptions = {
     header: null
 };
 
-const enhance = compose();
+const mapStateToProps = (state) => ({
+    loading: state.registerCoursesReducer.loading,
+    error: state.registerCoursesReducer.error,
+    query: state.registerCoursesReducer.query
+});
+
+const enhance = compose(
+    connect(mapStateToProps)
+);
 
 export default enhance(HomeScreen);

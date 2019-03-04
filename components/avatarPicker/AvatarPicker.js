@@ -18,14 +18,14 @@ const AvatarPicker = ({
             {
                 userAvatar ?
                     <Avatar
-                        size="xlarge"
+                        size="large"
                         title="Logo"
                         rounded
                         showEditButton
                         source={{uri: userAvatar}}
                     /> :
                     <Avatar
-                        size="xlarge"
+                        size="large"
                         title="Logo"
                         showEditButton
                         rounded
